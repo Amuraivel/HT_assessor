@@ -17,7 +17,41 @@ ui <- fluidPage(
    
    # Sidebar with a slider input for number of bins 
    sidebarLayout(
+     
+     
+     
       sidebarPanel(
+        sliderInput("time_horizon",
+                    "Time horizon:",
+                    min = 0,
+                    max = 100,
+                    value = 20),
+        selectInput("currency", "Currency:",
+                    c( "EUR" = "EUR",
+                       "USD" = "USD",
+                      "AUD" = "AUD",
+                      "BRL" = "BRL",
+                      "CAD" = "CAD",
+                      "CHF" = "CHF",
+                      "CNY" = "CNY",
+                      "GBP" = "GBP",
+                      "INR" = "INR",
+                      "JPY" = "JPY",
+                      "MXP" = "MXP",
+                      "NZD" = "NZD",
+                      "ZAR" = "ZAR")),
+        selectInput("discount","Discount",
+                    c("Yes." = 1,
+                    "No." = 0)),
+        
+        
+        sliderInput("",
+                    "Time horizon:",
+                    min = 0,
+                    max = 100,
+                    value = 20), 
+        
+        
          sliderInput("bins",
                      "Number of bins:",
                      min = 1,
